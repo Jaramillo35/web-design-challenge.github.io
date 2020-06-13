@@ -1,0 +1,117 @@
+body {
+    background-color: grey;
+}
+
+.grid {
+    display              : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap           : 50px;
+    background-color     : rgb(172, 167, 167)
+}
+
+.grid .container .img {
+    width       : 700px;
+    height      : 600px;
+    padding-left: 50px;
+}
+
+.grid .container {
+    grid-column-start: 1;
+    grid-column-end  : 4;
+    background-color : white;
+    padding-right    : 50px;
+}
+
+.grid .containe {
+    grid-column-start: 4;
+    grid-column-end  : 5;
+    background-color : whitesmoke;
+    padding-left     : 50px;
+}
+
+h3 {
+    color: #1b9370;
+}
+
+
+p {
+    padding-top: 30px;
+    text-align : justify;
+}
+
+h1 {
+    color       : #1b9370;
+    padding-left: 30px;
+}
+
+.navbar-nav {
+    padding-left: 100px;
+}
+
+.fixed-bottom {
+    background-color: #48645c;
+    text-align      : center;
+    padding         : .5vh;
+    color           : white;
+    font-family     : sans-serif;
+    margin-top      : 0;
+}
+
+.containe .one {
+    border: 0;
+}
+
+.containe .two {
+    border-color : #1b9370;
+    border-style : solid;
+    border-radius: 2px;
+}
+
+.small {
+    display: none;
+}
+
+@media (max-width:1500px) {
+    body {
+        background-color: grey;
+    }
+
+    .big {
+        display: none;
+    }
+
+    .small {
+        display: inline-block;
+    }
+
+    .grid {
+        display              : grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows   : 1fr 1fr;
+        grid-template-areas  :
+            "container container"
+            "containe containe";
+    }
+
+    .grid .container .img {
+        width : 400px;
+        height: 300px;
+    }
+
+    .grid .container {
+        grid-area: container;
+    }
+
+    .grid .containe {
+        grid-area: containe;
+    }
+
+    .fixed-bottom {
+        background-color: #48645c;
+        text-align      : center;
+        padding         : 2vh;
+        color           : white;
+        font-family     : sans-serif;
+        margin-top      : 0;
+    }
+}
